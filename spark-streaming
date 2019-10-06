@@ -1,0 +1,17 @@
+Structured Streaming:
+
+The 2.4 api added "kafka" to all configs.
+file path in the option is relative to the working dir.
+
+val kafkaDataFrame = spark
+  .readStream
+  .format("kafka")
+  .option("kafka.bootstrap.servers", kafkaUrl)
+  .option("kafka.security.protocol", "SASL_SSL")
+  .option("kafka.sasl.kerberos.service.name", "kafka")
+  //.option("kafka.sasl.jaas.config", "kafka")
+  .option("kafka.ssl.truststore.location", "./client-truststore.jks")
+  .option("kafka.ssl.truststore.password", "changeit")
+  .option("subscribe", topic)
+  .option("startingOffsets", "earliest")
+  .load()
