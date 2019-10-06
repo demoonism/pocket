@@ -1,0 +1,4 @@
+Create Trust store:
+keytool comes with Java JDK.
+keytool -keystore truststore.jks -alias RootCA -import -file rootCA.cer  -storepass {PWD} -keypass {PWD}
+keytool -list -v -keystore keystore.jks
