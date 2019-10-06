@@ -1,2 +1,4 @@
-To copy a file to all executors during spark-submit, use the --file option (comma separated list of file names). 
+- use spark.sparkContext.setLogLevel("INFO") to debug
+
+- To copy a file to all executors during spark-submit, use the --file option (comma separated list of file names). 
 You can also use # to rename the file on the fly. localfilename#remotefilename This option can only place file in the working dir.
