@@ -1,0 +1,2 @@
+To copy a file to all executors during spark-submit, use the --file option (comma separated list of file names). This option can only
+place file in the working dir.
